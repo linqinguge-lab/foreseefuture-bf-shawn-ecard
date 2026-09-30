@@ -3,169 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
 <meta name="theme-color" content="#071523">
 <title>BF. Shawn · ForeseeFuture</title>
 <meta name="description" content="Digital business card for BF. Shawn, CEO of ForeseeFuture.">
 <style>
-:root{
-  --bg:#071523;
-  --bg-deep:#04101c;
-  --surface:#0c1d30;
-  --surface-2:#10243b;
-  --blue:#1977f3;
-  --blue-2:#0f63e7;
-  --blue-soft:#102a49;
-  --text:#f8fbff;
-  --muted:#95a6b9;
-  --line:#173654;
-  --shadow:0 18px 45px rgba(0,0,0,.22);
-}
+:root{--bg:#071523;--surface:#0c1d30;--blue:#1977f3;--text:#f8fbff;--muted:#95a6b9;--line:#173654}
 *{box-sizing:border-box}
-html,body{
-  margin:0;min-height:100%;
-  background:#020914;color:var(--text);
-  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif
-}
-body{display:flex;justify-content:center;padding:0}
-.card{
-  width:min(100%,520px);
-  min-height:100vh;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(25,119,243,.18), transparent 28%),
-    linear-gradient(180deg,var(--bg) 0%,var(--bg-deep) 100%);
-  padding:34px 26px calc(34px + env(safe-area-inset-bottom));
-  position:relative;overflow:hidden
-}
-.card:before{
-  content:"";
-  position:absolute;right:-86px;top:0;
-  width:260px;height:260px;border-radius:50%;
-  background:linear-gradient(145deg,rgba(21,96,180,.18),rgba(9,35,61,.04))
-}
-.card:after{
-  content:"";
-  position:absolute;right:-122px;top:118px;
-  width:230px;height:230px;border-radius:50%;
-  background:rgba(13,71,132,.11)
-}
-.top{
-  position:relative;z-index:2;
-  display:flex;align-items:flex-start;justify-content:space-between
-}
-.logo{width:245px;max-width:66%;height:auto;display:block}
-.kicker{
-  font-size:12px;letter-spacing:.08em;
-  color:#7db8ff;font-weight:650;
-  margin-top:62px;white-space:nowrap
-}
-.hero{position:relative;z-index:2;margin-top:94px}
-.name{
-  font-size:56px;line-height:.98;letter-spacing:.01em;
-  font-weight:800;margin:0;color:#fff
-}
-.blue-rule{
-  width:54px;height:6px;border-radius:99px;
-  background:linear-gradient(90deg,#258aff,#0f63e7);
-  margin:18px 0 30px
-}
-.role{display:flex;gap:18px;align-items:center;font-size:18px}
-.role strong{font-weight:720;color:#fff}
-.role span{color:var(--muted)}
-.role .sep{width:1px;height:24px;background:#34516f}
-.tagline{
-  font-size:28px;line-height:1.2;
-  color:#61aaff;font-weight:500;margin:42px 0 12px
-}
-.sub{
-  color:var(--muted);font-size:16px;line-height:1.55;
-  margin:0 0 26px
-}
-.save{
-  display:flex;align-items:center;justify-content:space-between;
-  width:100%;padding:23px 26px;border-radius:24px;
-  background:linear-gradient(135deg,#248bff,#0f63e7);
-  color:#fff;text-decoration:none;font-size:22px;font-weight:750;
-  box-shadow:0 9px 0 #084ba9,0 18px 30px rgba(0,72,182,.24);
-  transition:.16s ease;margin-bottom:58px;
-  border:1px solid rgba(109,183,255,.35)
-}
-.save:active{
-  transform:translateY(4px);
-  box-shadow:0 5px 0 #084ba9,0 12px 22px rgba(0,72,182,.18)
-}
-.save .left{display:flex;align-items:center;gap:14px}
-.icon-circle{
-  width:36px;height:36px;
-  border:2px solid rgba(255,255,255,.82);
-  border-radius:50%;display:grid;place-items:center;font-size:18px
-}
-.section-head{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-bottom:18px
-}
-.section-head b{font-size:15px;letter-spacing:.02em;color:#fff}
-.section-head span{font-size:14px;color:var(--muted)}
-.contact{
-  display:flex;align-items:center;gap:18px;
-  padding:22px 18px;
-  border:1px solid var(--line);
-  border-radius:24px;
-  text-decoration:none;color:inherit;
-  margin-bottom:18px;
-  background:linear-gradient(180deg,rgba(14,36,59,.96),rgba(9,28,47,.96));
-  box-shadow:0 6px 0 #071320,0 12px 26px rgba(0,0,0,.14)
-}
-.contact .ico{
-  width:62px;height:62px;border-radius:20px;
-  background:linear-gradient(145deg,#15385e,#102a49);
-  display:grid;place-items:center;
-  color:#61aaff;font-size:30px;flex:0 0 62px;
-  border:1px solid #1d4773
-}
-.contact .meta{min-width:0;flex:1}
-.contact small{
-  display:block;color:var(--muted);
-  font-size:13px;font-weight:650;letter-spacing:.03em;margin-bottom:7px
-}
-.contact strong{
-  font-size:20px;line-height:1.25;
-  word-break:break-word;color:#fff
-}
-.contact .arrow{font-size:30px;color:#8fa1b5}
-.note{
-  display:flex;gap:16px;align-items:center;
-  background:linear-gradient(180deg,#0b2036,#0a1b2e);
-  border:1px solid var(--line);
-  border-radius:22px;padding:18px 20px;margin:34px 0 98px
-}
-.note .bar{
-  width:6px;height:42px;border-radius:9px;
-  background:linear-gradient(180deg,#258aff,#0f63e7)
-}
-.note b{display:block;font-size:15px;margin-bottom:4px;color:#fff}
-.note span{color:var(--muted);font-size:14px}
-footer{
-  border-top:1px solid var(--line);
-  padding-top:22px;display:flex;justify-content:space-between;
-  color:#71849b;font-size:14px
-}
-footer strong{color:#dfe8f2}
-@media (max-width:390px){
-  .card{padding-left:20px;padding-right:20px}
-  .name{font-size:49px}.hero{margin-top:78px}.tagline{font-size:25px}
-  .contact strong{font-size:17px}.logo{max-width:72%}.kicker{font-size:10px}
-}
-@media (max-width:520px){
-  .top{gap:12px}
-  .logo{max-width:calc(100% - 117px)}
-  .kicker{width:105px;flex-shrink:0;white-space:normal;text-align:right}
-}
+html,body{margin:0;min-height:100%;background:#020914;color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+body{display:flex;justify-content:center}
+.card{width:min(100%,520px);min-height:100svh;background:linear-gradient(180deg,#071523,#04101c);padding:24px 24px max(20px,env(safe-area-inset-bottom));display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:30px}
+.logo{display:block;width:210px;max-width:calc(100% - 108px);height:auto}
+.kicker{width:92px;flex-shrink:0;text-align:right;font-size:9px;line-height:1.5;letter-spacing:.09em;color:#7db8ff;font-weight:650}
+.hero{margin-top:32px}
+.name{font-size:44px;line-height:1.06;font-weight:800;letter-spacing:.01em;margin:0}
+.blue-rule{width:42px;height:4px;border-radius:9px;background:var(--blue);margin:12px 0 18px}
+.role{display:flex;gap:12px;align-items:center;font-size:15px;line-height:20px}
+.role strong{font-weight:720}.role span{color:var(--muted)}.role .sep{width:1px;height:18px;background:#34516f}
+.tagline{font-size:22px;line-height:1.25;color:#61aaff;font-weight:500;margin:22px 0 8px}
+.sub{color:var(--muted);font-size:12px;line-height:1.5;margin:0 0 20px;max-width:340px}
+.save{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:56px;padding:14px 18px;border-radius:16px;background:linear-gradient(135deg,#248bff,#0f63e7);color:white;text-decoration:none;font-size:18px;font-weight:750;margin-bottom:26px;border:1px solid #398ffe}
+.save .left{display:flex;align-items:center;gap:12px}.icon-circle{width:26px;height:26px;border:1.5px solid white;border-radius:50%;display:grid;place-items:center;font-size:18px}
+.section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.section-head b{font-size:12px;letter-spacing:.06em}.section-head span{font-size:11px;color:var(--muted)}
+.contact{display:flex;align-items:center;gap:12px;padding:14px 12px;min-height:72px;border:1px solid var(--line);border-radius:16px;text-decoration:none;color:inherit;margin-bottom:10px;background:var(--surface)}
+.contact .ico{width:38px;height:38px;border-radius:12px;background:#102a49;display:grid;place-items:center;color:#61aaff;flex:0 0 38px}
+.contact svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.contact .meta{min-width:0;flex:1}.contact small{display:block;color:var(--muted);font-size:10px;letter-spacing:.08em;margin-bottom:5px}.contact strong{font-size:15px;line-height:1.3;font-weight:650;overflow-wrap:anywhere}.contact.email strong{font-size:clamp(11.5px,3.4vw,15px)}.contact .arrow{font-size:23px;color:#8fa1b5}
+footer{margin-top:auto;padding-top:20px;display:flex;justify-content:space-between;gap:8px;color:#71849b;font-size:10px;line-height:1.4}footer strong{color:#dfe8f2}
+a:focus-visible{outline:2px solid #7db8ff;outline-offset:4px}a:active{filter:brightness(.9)}
+@media(max-height:740px){.card{padding-top:20px;padding-bottom:16px}.hero{margin-top:22px}.name{font-size:40px}.blue-rule{margin:10px 0 14px}.tagline{margin-top:18px;font-size:20px}.sub{margin-bottom:16px}.save{min-height:52px;margin-bottom:20px}.contact{min-height:66px;padding-top:11px;padding-bottom:11px}footer{padding-top:14px}}
+@media(max-width:350px){.card{padding-left:18px;padding-right:18px}.name{font-size:38px}.role{font-size:14px}.section-head span{font-size:10px}.contact{gap:10px}.contact strong{font-size:14px}}
 </style>
 </head>
 <body>
 <main class="card">
   <div class="top">
-    <img class="logo" src="ff-logo-dark.png" alt="ForeseeFuture">
+    <img class="logo" src="ff-logo-dark.svg" alt="ForeseeFuture">
     <div class="kicker">DIGITAL BUSINESS CARD</div>
   </div>
 
@@ -182,7 +56,7 @@ footer strong{color:#dfe8f2}
     <h2 class="tagline">See Ahead. Act Globally.</h2>
     <p class="sub">Executive contact details · ready to save in one tap.</p>
 
-    <a class="save" href="BF-Shawn.vcf" download="BF-Shawn.vcf">
+    <a class="save" href="BF-Shawn.vcf" type="text/vcard">
       <span class="left"><span class="icon-circle">+</span>Save to Contacts</span>
       <span>›</span>
     </a>
@@ -193,7 +67,7 @@ footer strong{color:#dfe8f2}
     </div>
 
     <a class="contact" href="tel:+4915207935283">
-      <span class="ico">☎</span>
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2a15 15 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2Z"/></svg></span>
       <span class="meta">
         <small>MOBILE</small>
         <strong>+49 1520 7935283</strong>
@@ -201,8 +75,8 @@ footer strong{color:#dfe8f2}
       <span class="arrow">›</span>
     </a>
 
-    <a class="contact" href="mailto:shawnx@foreseefuturecc.com">
-      <span class="ico">✉</span>
+    <a class="contact email" href="mailto:shawnx@foreseefuturecc.com">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>
       <span class="meta">
         <small>EMAIL</small>
         <strong>shawnx@foreseefuturecc.com</strong>
@@ -210,13 +84,6 @@ footer strong{color:#dfe8f2}
       <span class="arrow">›</span>
     </a>
 
-    <div class="note">
-      <span class="bar"></span>
-      <div>
-        <b>No app required</b>
-        <span>Save directly to the recipient's phone contacts.</span>
-      </div>
-    </div>
   </section>
 
   <footer>
